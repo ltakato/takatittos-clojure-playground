@@ -1,0 +1,25 @@
+(defn imprime-mensagem []
+  (println "Bem vindo ao estoque!")
+  (println "Bem vindo ao estoque!"))
+
+(imprime-mensagem)
+
+;; diferença de nomenclatura: "aplicar" soa algo "imperativo" com efeito colateral (ex: alterar valor recebido já aplicando desconto)
+(defn aplica-desconto [valor-bruto]
+  (* valor-bruto 0.9))
+
+(aplica-desconto 100)
+
+;; diferença de nomenclatura: nessa versão parece ser mais "declarativo" - idempotente, função pura, executar quantas vezes quiser
+(defn valor-descontado
+  "Retorna o valor descontado de 90% do valor enviado"
+  [valor-bruto]
+  (* valor-bruto 0.9))
+
+(valor-descontado 100)
+
+;; praticamente a mesma coisa só que com outro "olhar"
+(defn valor-descontado
+  "Retorna o valor com desconto de 10%"
+  [valor-bruto]
+  (* valor-bruto (- 1 0.1)))
