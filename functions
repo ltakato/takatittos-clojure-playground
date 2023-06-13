@@ -23,3 +23,33 @@
   "Retorna o valor com desconto de 10%"
   [valor-bruto]
   (* valor-bruto (- 1 0.1)))
+
+;; usando simbolo para valor de desconto
+;; problema: o simbolo desconto do jeito que está, fica global!
+(defn valor-descontado
+  "Retorna o valor com desconto de 10%"
+  [valor-bruto]
+  (def desconto 0.1)
+  (* valor-bruto (- 1 desconto)))
+
+(valor-descontado 100)
+
+;; outra versão com let (simbolos locais)
+(defn valor-descontado
+  "Retorna o valor com desconto de 10%"
+  [valor-bruto]
+  (let [desconto 0.1]
+    (println "Calculando desconto de" desconto)
+    (* valor-bruto (- 1 desconto))))
+
+(valor-descontado 100)
+
+;; outra versão ainda com let
+(defn valor-descontado
+  "Retorna o valor com desconto de 10%"
+  [valor-bruto]
+  (let [desconto (/ 10 100)]
+    (println "Calculando desconto de" desconto)
+    (* valor-bruto (- 1 desconto))))
+
+(valor-descontado 100) ;; vai dar 90N -> BitInt!
