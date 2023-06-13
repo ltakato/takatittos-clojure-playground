@@ -53,3 +53,30 @@
     (* valor-bruto (- 1 desconto))))
 
 (valor-descontado 100) ;; vai dar 90N -> BitInt!
+
+;; reformulando com varios simbolos
+(defn valor-descontado
+  "Retorna o valor com desconto de 10%"
+  [valor-bruto]
+  (let [taxa-de-desconto (/ 10 100)
+        desconto (* valor-bruto taxa-de-desconto)]
+    (println "Calculando desconto de" desconto)
+    (- valor-bruto desconto)))
+
+(valor-descontado 100) ;; vai dar 90N -> BitInt!
+
+;; condicional
+(if (> 50 100)
+  (println "maior")
+  (println "menor ou igual"))
+
+;; valor descontado com condicional
+(defn valor-descontado
+  "Retorna o valor com desconto de 10% se o valor bruto for estritamente maior que 100"
+  [valor-bruto]
+  (if (> valor-bruto 100)
+    (let [taxa-de-desconto (/ 10 100)
+          desconto (* valor-bruto taxa-de-desconto)]
+      (println "Calculando desconto de" desconto)
+      (- valor-bruto desconto))
+    valor-bruto))
