@@ -1,3 +1,5 @@
+(ns curso.aula2)
+
 (defn imprime-mensagem []
   (println "Bem vindo ao estoque!")
   (println "Bem vindo ao estoque!"))
@@ -8,7 +10,7 @@
 (defn aplica-desconto [valor-bruto]
   (* valor-bruto 0.9))
 
-(aplica-desconto 100)
+(println (aplica-desconto 100))
 
 ;; diferença de nomenclatura: nessa versão parece ser mais "declarativo" - idempotente, função pura, executar quantas vezes quiser
 (defn valor-descontado
@@ -71,12 +73,12 @@
   (println "menor ou igual"))
 
 ;; valor descontado com condicional
-(defn valor-descontado
-  "Retorna o valor com desconto de 10% se o valor bruto for estritamente maior que 100"
-  [valor-bruto]
-  (if (> valor-bruto 100)
-    (let [taxa-de-desconto (/ 10 100)
-          desconto (* valor-bruto taxa-de-desconto)]
-      (println "Calculando desconto de" desconto)
-      (- valor-bruto desconto))
-    valor-bruto))
+;; (defn valor-descontado
+;;   "Retorna o valor com desconto de 10% se o valor bruto for estritamente maior que 100"
+;;   [valor-bruto]
+;;   (if (> valor-bruto 100)
+;;     (let [taxa-de-desconto (/ 10 100)
+;;           desconto (* valor-bruto taxa-de-desconto)]
+;;       (println "Calculando desconto de" desconto)
+;;       (- valor-bruto desconto))
+;;     valor-bruto))
