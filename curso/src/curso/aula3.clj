@@ -56,3 +56,10 @@
 ;; como tem só um argumento, nem precisa de 1
 (println (valor-descontado #(> % 100) 1000))
 (println (valor-descontado #(> % 100) 100))
+
+;; definir simbolo para uma anonymous function
+;; não estou DEFININDO UMA FUNÇÃO! só dando nome para uma existente
+(def mais-caro-que-100-simb? #(> % 100))
+
+(println (mais-caro-que-100-simb? 1000))
+(println (mais-caro-que-100-simb? 100))

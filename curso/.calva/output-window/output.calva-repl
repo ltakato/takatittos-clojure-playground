@@ -41,3 +41,33 @@ clj꞉curso.aula2꞉> 
 Bem vindo ao sistema de estoque
 nil
 clj꞉curso.core꞉> 
+; Evaluating file: aula3.clj
+900N
+100
+900N
+100
+900N
+100
+900N
+100
+#function[curso.aula3/mais-caro-que-100-simb?] 1000
+nil
+clj꞉curso.aula3꞉> 
+#function[curso.aula3/mais-caro-que-100-simb?] 1000
+nil
+clj꞉curso.aula3꞉> 
+#function[curso.aula3/mais-caro-que-100-simb?] 100
+nil
+clj꞉curso.aula3꞉> 
+false
+clj꞉curso.aula3꞉> 
+#function[curso.aula3/mais-caro-que-100-simb?]
+clj꞉curso.aula3꞉> 
+#function[curso.aula3/mais-caro-que-100-simb?]
+clj꞉curso.aula3꞉> 
+true
+nil
+clj꞉curso.aula3꞉> 
+false
+nil
+clj꞉curso.aula3꞉> 
