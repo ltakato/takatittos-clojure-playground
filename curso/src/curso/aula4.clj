@@ -61,3 +61,20 @@
 (println "filter" (filter aplica-desconto? precos))
 
 (println "map apos o filter" (map valor-descontado (filter aplica-desconto? precos)))
+
+(println "vetor" precos)
+(reduce + precos)
+
+(defn minha-soma
+  [valor-1 valor-2]
+  (println "somando" valor-1 valor-2)
+  (+ valor-1 valor-2))
+
+(println (reduce minha-soma precos))
+(println (reduce minha-soma (range 10)))
+(println (reduce minha-soma [15]))
+
+;; com valor inicial
+(println (reduce minha-soma 0 (range 10)))
+(println (reduce minha-soma 0 (range 10)))
+(println (reduce minha-soma 0 [15]))
